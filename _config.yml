@@ -22,8 +22,8 @@ nav:
  - name: "Resume"
    link: "/Archit_Resume_Full.pdf"
  - name: "Contact"
-   link: "contact"
+   link: "/contact"
  - name: "Blog"
-   link: "blog"
+   link: "/blog"
 
 theme: jekyll-theme-minimal
