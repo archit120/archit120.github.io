@@ -3,7 +3,7 @@ layout: default
 is_contact: true
 ---
 
-* Email: [archit120@iitkgp.ac.in](mailto:archit120@iitkgp.ac.in)
+* Email: [architrungt120@gmail.com](mailto:architrungt120@gmail.com)
 
 * Phone: [+91-8084207992](tel:+91-8084207992)
 

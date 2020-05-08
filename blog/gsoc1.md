@@ -1,5 +1,7 @@
 ---
 layout: default_blog
+title: Archit - GSoC - The Beginning
+description: Hi! I'm Archit. In this series of blog posts, I mainly plan on walking you through what it was like working for GSoC, what challenges I faced, and how I overcame those.
 ---
 
 ## GSoC Blog 1 - The Beginning
@@ -28,7 +30,7 @@ Eventually, this becomes the project that I would work on. Interestingly, the or
 
 #### Initial Contact
 
-My next step was to get onto the Julia Slack. I went to the `image-processing` channel and declared my intention to work on this project. The members of the slack channel were accommodating and gave me some more initial pointers about what to research. I was also given an initial task to get started with Image Processing in Julia. The job was to implement the functionality of findContours from OpenCV in Julia. I started doing this research on a Sunday and has some free time, so I decided to start working on it. Luckily, through a lot of intensive googling, I discovered the original paper of findContours and even found a very straight-forward implementation. Converting the code didn't take a lot of time. I created my first pull request to JuliaImages within 12 hours of getting this task. Another oddity from most other GSoC selections that you might come across, this was also the only pull request that I had up till the day of results announcement. 
+My next step was to get onto the Julia Slack. I went to the `image-processing` channel and declared my intention to work on this project. The members of the slack channel were accommodating and gave me some more initial pointers about what to research. I was also given an initial task to get started with Image Processing in Julia. The job was to implement the functionality of findContours from OpenCV in Julia. I started doing this research on a Sunday and had some free time, so I decided to start working on it. Luckily, through a lot of intensive googling, I discovered the original paper of findContours and even found a very straight-forward implementation. Converting the code didn't take a lot of time. I created my first pull request to JuliaImages within 12 hours of getting this task. Another oddity from most other GSoC selections that you might come across, this was also the only pull request that I had up till the day of results announcement. 
 
 #### Investigation
 

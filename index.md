@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Archit Rungta
+description: Hi! I'm Archit, an undergraduate sophomore exploring in the world of computer science.
 ---
 
 > "An unexamined life is not worth living" - Plato

@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Archit - Blog
+description: Hi! I'm Archit, here you can find a collection of my technical writings.
 ---
 
 ## Some technical and random musings
