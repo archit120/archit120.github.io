@@ -14,9 +14,9 @@ Hit me up if you've got a cool idea regarding any of those and wish to collabora
 
 ## Present
 
-* Working on a new architecture for object localization and detection in images using recurrent deep learning models with attention module. 
+* Working on the GSoC Project [OpenCV bindings for Julia](https://summerofcode.withgoogle.com/dashboard/student/proposal/5306473988489216/). The goal is to create bindings that allow OpenCV to be integreated seamlessly with Julia. The binding generators are written in Python and create the wrappers automatically by reading the header files. 
 
-* A stabler RL based controller for faster landing of quadrotors on helipads.
+* A stabler RL based controller for faster autonomous landing of quadrotors on helipads. This is based on previous visual servoing work by me and Yash Soni.
 
 * Developing methods to train and infer from extremely deep and sparse neural networks while preserving performance. 
 
@@ -24,13 +24,13 @@ Hit me up if you've got a cool idea regarding any of those and wish to collabora
 
 * Working on an app using Node.JS, Express and Ionic to automatically find riders for point to point shared rides. Useful in my university as the nearest major airport is 130KM away. The biggest challenge is solving the combinatorial optimization problem of which riders to pool with as users have friend preference but want to wait as little as possible. Based on ideas rooted in a minimum spanning tree.
 
-* You can find me on codeforces as [architrungta120](https://codeforces.com/profile/architrungta120). I've recently started dipping my toes in competetive programming again.
+* You can find me on codeforces as [architrungta120](https://codeforces.com/profile/architrungta120).
 
 ## Past
 
 * Part of the only sophomore team from IIT Kharagpur to qualify for ICPC regionals in India. We were ranked 42nd in the Amritapuri Regionals and came in at 4th rank from our university.
 
-* Won 1st prize at indoor IMAV 2019, a micro aerial vehicle competition. I was involved in the finite state machine and computer vision modules. Had to write a new module that used temporary log files while our contest time was running as the old one failed due to a race condition.
+* Won 1st prize at indoor IMAV 2019, a micro aerial vehicle competition. I was involved in the finite state machine and computer vision modules. Had to write a new module that used temporary log files while our contest time was running (<5 minutes left) as the old one failed due to a race condition.
 
 * Made a glove with Shreyansh Darshan that uses IMU sensor to map the entire hand with all its motions. As a sample use, created neural networks to learn sign language symbols and interpret. The project was coded in C++ and Python.  [Video demonstration](https://youtu.be/Rl1C584UrW0).
 
