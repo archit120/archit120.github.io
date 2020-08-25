@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Archit Rungta
-description: Hi! I'm Archit, an undergraduate sophomore exploring in the world of computer science.
+description: Hi! I'm Archit, an undergraduate junior exploring the world of computer science.
 ---
 
 > "An unexamined life is not worth living" - Plato
@@ -10,15 +10,13 @@ description: Hi! I'm Archit, an undergraduate sophomore exploring in the world o
 
 <img class="profile-picture" src="archit.jpg">
 
-Hi! I am Archit, a sophomore at Indian Institute of Technology, Kharagpur currently completing a BS+MS in Mathematics and Computing. I've had stints with competetive programming and software development.  Currently, I'm a perception team member at Aerial Robotics Lab, Kharagpur and an independent researcher into NLP, Reinforcement Learning and Image Processing. I'm also collaborating at Kharagpur Learning, Imaging and Visualization Group. 
+Hi! I am Archit, a junior at Indian Institute of Technology, Kharagpur currently completing a BS+MS major in Mathematics and Computing with minor in Computer Science and Engineering. I've had stints with competetive programming and software development.  Currently, I'm a perception team member at Aerial Robotics Lab, Kharagpur and an independent researcher into Reinforcement Learning and Computer Vision. I'm also collaborating at Kharagpur Learning, Imaging and Visualization Group. 
 
 Hit me up if you've got a cool idea regarding any of those and wish to collaborate!
 
 ## Present
 
 * Working on the GSoC Project [OpenCV bindings for Julia](https://summerofcode.withgoogle.com/dashboard/student/proposal/5306473988489216/). The goal is to create bindings that allow OpenCV to be integreated seamlessly with Julia. The binding generators are written in Python and create the wrappers automatically by reading the header files. 
-
-* A stabler RL based controller for faster autonomous landing of quadrotors on helipads. This is based on previous visual servoing work by me and Yash Soni.
 
 * Developing methods to train and infer from extremely deep and sparse neural networks while preserving performance. 
 

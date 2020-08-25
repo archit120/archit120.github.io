@@ -11,7 +11,7 @@ is_contact: true
 
 ## Mailing Address
 
-> D 208, LBS
+> A 502, LBS
 >
 > IIT KGP, Kharagpur
 >
