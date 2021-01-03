@@ -6,6 +6,8 @@ description: Hi! I'm Archit, here you can find a collection of my technical writ
 
 ## Some technical and random musings
 
+5. [Teaching Myself CS](/blog/mnc) A post about the inadequacies of KGP MnC and what I'm trying to overcome it.
+
 4. [GSoC Final Evaluation Post](/blog/gsocfinal) The final blog post for my GSoC Project
 
 3. [GSoC Blog 2 - The Proposal](/blog/gsoc2) The second part of the series.

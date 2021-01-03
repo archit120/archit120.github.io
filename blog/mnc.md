@@ -1,10 +1,10 @@
 ---
 layout: default_blog
-title: Archit - GSoC - The Proposal
-description: Hi! I'm Archit. In this series of blog posts, I mainly plan to walk you through what it was like working for GSoC, what challenges I faced, and how I overcame those challenges.
+title: Archit - Learning CS on your own
+description: Hi! I'm Archit. In this blog post I tell you about the challenges I had to face in my degree plan and how I'm trying to resolve those by studying important computer science topics on my own.
 ---
 
-## Teach Yourself CS
+## Teaching Myself CS
 
 ### But Why?
 
@@ -32,7 +32,6 @@ The courses that I feel important and necessary to be redone in no particular or
  2. Operating Systems and Systems Programming
  3. Database Management Systems
  4. Networks
- 5. Distributed Systems
 
 In addition to these, Compilers is supposed to be an extremely important course but so far I haven't been able to decide on its importance for most SWE roles. Finally, the Missing Semester course by MIT is probably a good addition to this list but I'm not including it because the course content is freely available and not something that necessarily needs to be followed in a structured ordered. 
 
@@ -46,4 +45,58 @@ A final note, while lecture videos are obviously important, I think it is imposs
 
 > Computer Architecture—sometimes called “computer systems” or “computer organization”—is an important first look at computing below the surface of software. In our experience, it’s the most neglected area among self-taught software engineers.
 
+I preferred following CS61C by UC Berkeley. The lecture videos are available here - [L01 Course Introduction | UC Berkeley CS 61C, Spring 2015](https://www.youtube.com/watch?v=9y_sUqHeyy8&list=PLhMnuBfGeCDM8pXLpqib90mDFJI-e1lpk&ab_channel=SatyakiranDuggina). These videos are from Spring 2015 unfortunately and are a little out of date.
 
+A better resource for this lecture is following the book Computer Organization and Design RISC-V Edition by Patterson and Hennessy. The best way to do this book is to go through [CS 61C FA20 website](https://cs61c.org/fa20/) and follow the suggested reading. Once you're done with reading go through the slides to make sure that you understand everything covered in the class aswell. Finally, complete the assignments and projects as described on the course website. These can be found at https://github.com/61c-teach/fa20-lab-starter and https://github.com/61c-teach/fa20-proj1-starter (first project but you can figure out the rest).
+
+### Opearting Systems
+
+>> Most of the code you write is run by an operating system, so you should know how those interact.	
+
+My advice for all courses is similar to COA. So to avoid unnecessary reading, and typing! I'll simply put out the necessary links. Most of the relevant information can usually be found with a little digging on the course websites.
+
+Suggested course: [CS 162 by UC Berkeley](https://cs162.org/)
+
+Suggested Book: Operating Systems: Principles and Practice (2nd Ed.)
+
+Lectures: [COMPSCI 162 - 2020-01-21
+](https://www.youtube.com/watch?v=itfEcA3TXq4&list=PLIMsSuI81pxq7c91oQMpmXgmGICbuDA_c&ab_channel=WebcastDepartmental) Spring 2020 so yay! But 3 lectures are missing.
+
+Assignments: https://github.com/Berkeley-CS162/student0
+
+Projects: https://github.com/Berkeley-CS162/group0
+
+### Database Management Systems
+
+>> Data is at the heart of most significant programs, but few understand how database systems actually work.	
+
+Suggested course: [CS 186 by UC Berkeley](https://cs186berkeley.net/)
+
+Suggested Book: Nothing!
+
+Lectures: [Lecture 1 Part 1 Intro and Why
+](https://www.youtube.com/watch?v=j-iq40QBJy8&list=PLYp4IGUhNFmw8USiYMJvCUjZe79fvyYge&ab_channel=CS186Berkeley) Fall 2018 but supposedly upto date.
+
+Assignments: https://cs186berkeley.net/ 
+
+Projects: https://github.com/berkeley-cs186/fa20-moocbase 
+
+### Computer Networks
+
+>> The Internet turned out to be a big deal: understand how it works to unlock its full potential.	
+
+> Given that so much of software engineering is on web servers and clients, one of the most immediately valuable areas of computer science is computer networking. Our self-taught students who methodically study networking find that they finally understand terms, concepts and protocols they’d been surrounded by for years.
+
+
+
+Suggested Course: [CS 144 by Stanford](https://cs144.github.io/)
+
+Suggested Book: Nothing! 
+
+Lectures: [CS144 Fall 2013 Video 1-0: The Internet and IP Introduction](https://www.youtube.com/watch?v=-nciJGUPyAM&list=PLEAYkSg4uSQ2dr0XO_Nwa5OcdEcaaELSG&index=1&ab_channel=PhilipLevis) Fall 2013 unfortunately. It's best to supplement with readings through the internet and going through slides carefully.
+
+Projects: https://github.com/CS144/sponge
+
+---
+
+And that's it. I suggest going through [teachyourselfcs.com](https://teachyourselfcs.com) aswell. I did try making some study groups but that didn't go particularly well. If anyone wants, I can post the WhatsApp group links for those. 
