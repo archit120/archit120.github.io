@@ -6,6 +6,8 @@ description: Hi! I'm Archit, here you can find a collection of my technical writ
 
 ## Some technical and random musings
 
+6. [A DNS Dive](/blog/dns) My attempt at creating a DNS resolver.
+
 5. [Teaching Myself CS](/blog/mnc) A post about the inadequacies of KGP MnC and what I'm trying to overcome it.
 
 4. [GSoC Final Evaluation Post](/blog/gsocfinal) The final blog post for my GSoC Project
@@ -14,6 +16,6 @@ description: Hi! I'm Archit, here you can find a collection of my technical writ
 
 2. [GSoC Blog 1 - The Beginning](/blog/gsoc1) First in hopefully a series of posts about how I came up with the idea, wrote the proposal and what the work was like. This post in particular is about how I got started. 
 
-1. [A Fresh Start](/blog/intro) A technical blog stars with a random, well sorta, muse about what it aims to be.
+1. [A Fresh Start](/blog/intro) A technical blog starts with a random, well sorta, muse about what it aims to be.
 
 Shoot me an email, if you got anything to add/discuss!

@@ -10,19 +10,19 @@ description: Hi! I'm Archit, an undergraduate junior exploring the world of comp
 
 <img class="profile-picture" src="archit.jpg">
 
-Hi! I am Archit, a junior at Indian Institute of Technology, Kharagpur currently completing a BS+MS major in Mathematics and Computing with minor in Computer Science and Engineering. I've had stints with competetive programming and software development.  Currently, I'm a perception team member at Aerial Robotics Lab, Kharagpur and an independent researcher into Reinforcement Learning and Computer Vision. I'm also collaborating at Kharagpur Learning, Imaging and Visualization Group. 
+Hi! I am Archit, a senior at Indian Institute of Technology, Kharagpur currently completing a BS+MS major in Mathematics and Computing with minor in Computer Science and Engineering. I've had stints with competetive programming and software development.  Currently, I'm a perception team member at Aerial Robotics Lab, Kharagpur and also interested in Reinforcement Learning. 
 
 Hit me up if you've got a cool idea regarding any of those and wish to collaborate!
 
 ## Present
 
-* Working on the GSoC Project [OpenCV bindings for Julia](https://summerofcode.withgoogle.com/dashboard/student/proposal/5306473988489216/). The goal is to create bindings that allow OpenCV to be integreated seamlessly with Julia. The binding generators are written in Python and create the wrappers automatically by reading the header files. 
+* Working on a cool stealth startup. More coming soon!
 
 * Developing methods to train and infer from extremely deep and sparse neural networks while preserving performance. 
 
 * Life?
 
-* Working on an app using Node.JS, Express and Ionic to automatically find riders for point to point shared rides. Useful in my university as the nearest major airport is 130KM away. The biggest challenge is solving the combinatorial optimization problem of which riders to pool with as users have friend preference but want to wait as little as possible. Based on ideas rooted in a minimum spanning tree.
+* Preparing for a possible spot at the ICPC-WF 2021.
 
 * You can find me on codeforces as [architrungta120](https://codeforces.com/profile/architrungta120).
 

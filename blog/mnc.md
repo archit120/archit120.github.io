@@ -1,6 +1,6 @@
 ---
 layout: default_blog
-title: Archit - Learning CS on your own
+title: Archit - Teaching Myself CS
 description: Hi! I'm Archit. In this blog post I tell you about the challenges I had to face in my degree plan and how I'm trying to resolve those by studying important computer science topics on my own.
 ---
 
