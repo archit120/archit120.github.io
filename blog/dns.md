@@ -67,7 +67,7 @@ The header is present in all messages. It structure follows -
 
 Over here the fields and their values are 
 
- - ID - Any random 16 bit number works. The protocol guarantees that replies to queries will have the same ID. So let's just use `0000h`.
+ - ID - Any random 16 bit number works. The protocol guarantees that replies to queries will have the same ID. So let's just use `0100h`.
  - QR - `0` for query and `1` for response. We pick `0`.
  - Opcode - `0` for standard query. 
  - TC - Indicates truncation. For us it will be `0`.
@@ -132,7 +132,7 @@ With all that done, the final packet in hex is
 
 Before we can send the packet we need to figure out where. [This](https://www.iana.org/domains/root/servers) lists out the root DNS servers. I am choosing the first one with the IP `198.41.0.4` but any should work. Now we need a program to send this packet. 
 
-We could do this using terminal tools but since we wish to eventually make a python program I decided to use Python code to send the packet. This is a simple [script](dns1.py) that sends the UDP packet, received the output and prints it nicely in hex and ascii. 
+We could do this using terminal tools but since we wish to eventually make a python program I decided to use Python code to send the packet. This is a simple [script](https://github.com/archit120/DNSWhy/blob/master/manual/dns1.py) that sends the UDP packet, received the output and prints it nicely in hex and ascii. 
 
 ```python
 import socket
@@ -141,7 +141,7 @@ import base64
 server = "198.41.0.4"
 port = 53
 
-message_hex = "000000000001000000000000076369746164656C03636F6D0000010001"
+message_hex = "010000000001000000000000076369746164656C03636F6D0000010001"
 message_binary = base64.b16decode(message_hex, True)
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -159,7 +159,7 @@ for i in range(0, len(hex_str), 4):
 
 The data received back from the server is 
 ```
-00 00 | 
+01 00 | 
 80 00 | �
 00 01 |  ☺
 00 00 |
@@ -194,7 +194,7 @@ Truncated the rest of the packet for brevity.
 The response structure also follows the standard message format. So we can first interpret the header. 
 
 ```
-00 00 - ID matches the one we sent
+01 00 - ID matches the one we sent
 80 00 - QR+Opcode+AA+TC+RD+RA+Z+RCODE
 00 01 - Query Count
 00 00 - Answer Count
@@ -213,7 +213,7 @@ To understand the third and forth bytes we need to blow it up to binary. `80 00`
       1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 ```
 
-So we can clearly see the QR is `1` and everything else is `0`. QR being `1` means this is a response as expected and the rest of the fields indicate standard query, no recursion and no errors.
+So we can clearly see the QR is `1` and everything else is `0`. QR being `1` means this is a response as expected and the rest of the fields indicate standard query, no recursion and no errors. `RCODE` is `0` which means no errors.
 
 ### Question
 
@@ -221,7 +221,7 @@ Identical to the original question we sent.
 
 ### Resource Record
 
-Before we can interpret Authority and Additional sections we need to look at RR formats.
+Before we can interpret Authority and Additional sections we need to look at RR formats and message compression.
 
 ```
                                     1  1  1  1  1  1
@@ -247,3 +247,132 @@ Before we can interpret Authority and Additional sections we need to look at RR 
 ```
 
 
+The fields are -
+
+ - NAME - Name of the node for which the record exists. 
+ - TYPE - Similar to QTYPE. For this project we need `A`, `NS` and `CNAME` records which have the values `1` , `2` and `5`.
+ - CLASS - Should always be `1` for internet
+ - TTL - Standard 32 bit TTL with big-endian encoding. `0` means no caching
+ - RDLENGTH - 16 bit integer containing length of RDATA
+ - RDATA - Associated data with the RR. We consider 3 formats.
+
+### Message Compression
+
+All `NAME` data fields can be compressed using pointers. The method to interpret this compression is pretty simple. Any label that start with `11` in the first two higher order bits represents compression. The next 6 bits are a pointer to where the actual label already exists in the packet. For example - 
+
+```
+
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    20 |           1           |           F           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    22 |           3           |           I           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    24 |           S           |           I           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    26 |           4           |           A           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    28 |           R           |           P           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    30 |           A           |           0           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    40 |           3           |           F           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    42 |           O           |           O           |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    44 | 1  1|                20                       |
+       +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+```
+The `NAME` starting at `40` is `FOO.F.ARPA`.
+
+### CNAME RDATA
+
+```
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    /                     CNAME                     /
+    /                                               /
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+```
+
+ - CNAME - The queried for name is an alias for the name present in this field
+
+### NS RDATA
+
+```
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    /                   NSDNAME                     /
+    /                                               /
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+```
+- NSDNAME - The returned domain name should be an authoritative nameserver for the queried domain. We will have to recusrively query the given name-server.
+
+### A RDATA
+
+```
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+    |                    ADDRESS                    |
+    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+```
+
+- ADDRESS - 32 bit IP address for the domain name.
+
+### Scripting Time
+
+With all that out of the way we can finally start interpreting the entire packet. Because the response packet is very big I didn't want to go breaking it apart byte by byte. This [python script](https://github.com/archit120/DNSWhy/blob/master/manual/dns2.py) is an extension of the previous one and does just that. The pretty-printed output is 
+
+```
+Message:
+    header: Header:
+        ID: 256
+        QDCount: 1
+        ANCount: 0
+        NSCount: 13
+        ARCount: 14
+        QR: True
+        Opcode: 0
+        AA: False
+        TC: False
+        RD: False
+        RA: False
+        Z: 0
+        RCODE: 0
+    questions: [Question:
+        QName: citadel.com
+        QType: 1
+        QClass: 1
+        end_pos: 29]
+    answers: []
+    authority: [ResourceRecord:
+        Name: com
+        Type: 2
+        Class: 1
+        TTL: 172800
+        RDLength: 20
+        RData: NSRData:
+            RData: a.gtld-servers.net
+            end_pos: 61
+        end_pos: 61, ResourceRecord:
+        ...
+    additional: [ResourceRecord:
+        Name: a.gtld-servers.net
+        Type: 1
+        Class: 1
+        TTL: 172800
+        RDLength: 4
+        RData: ARData:
+            RData: 192.5.6.30
+            end_pos: 269
+        end_pos: 269, ResourceRecord:
+        ...
+        Name: a.gtld-servers.net
+        Type: 28
+        Class: 1
+        TTL: 172800
+        RDLength: 16
+        end_pos: 489]
+```
+
+### Interpretation
+
+The answers section is empty so the queried name-server does not know where `citadel.com` is. However, it does tell us other information that maybe useful. Namely these are `NS` type records for `.com` top-level-domain. The additional part of the message also contains the `A` and `AAAA` records for these name-servers. So now we can query one of these nameservers. To proceede further we will need recursion and that's the topic for part - 2.
