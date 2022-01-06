@@ -16,7 +16,7 @@ Hit me up if you've got a cool idea regarding any of those and wish to collabora
 
 ## Present
 
-* Working on a cool stealth startup. More coming soon!
+* Working on a cool web service. More coming soon!
 
 * Developing methods to train and infer from extremely deep and sparse neural networks while preserving performance. 
 
