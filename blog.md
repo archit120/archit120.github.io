@@ -6,6 +6,8 @@ description: Hi! I'm Archit, here you can find a collection of my technical writ
 
 ## Some technical and random musings
 
+7. [A DNS Dive - Part 2](/blog/dns2) Finishing up on the DNS resolver.
+
 6. [A DNS Dive](/blog/dns) My attempt at creating a DNS resolver.
 
 5. [Teaching Myself CS](/blog/mnc) A post about the inadequacies of KGP MnC and what I'm trying to overcome it.
