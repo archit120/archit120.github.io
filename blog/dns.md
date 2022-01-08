@@ -4,7 +4,7 @@ title: Archit - A DNS Dive
 description: Hi! I'm Archit. This page attempts to chronicle my experience of creating a DNS resolver
 ---
 
-## A DNS Dive
+## A DNS Dive - Part 1
 
 ### Motivation
 
@@ -375,4 +375,4 @@ Message:
 
 ### Interpretation
 
-The answers section is empty so the queried name-server does not know where `citadel.com` is. However, it does tell us other information that maybe useful. Namely these are `NS` type records for `.com` top-level-domain. The additional part of the message also contains the `A` and `AAAA` records for these name-servers. So now we can query one of these nameservers. To proceede further we will need recursion and that's the topic for part - 2.
+The answers section is empty so the queried name-server does not know where `citadel.com` is. However, it does tell us other information that maybe useful. Namely these are `NS` type records for `.com` top-level-domain. The additional part of the message also contains the `A` and `AAAA` records for these name-servers. So now we can query one of these nameservers. To proceede further we will need recursion and that's the topic for [part - 2](dns2).
