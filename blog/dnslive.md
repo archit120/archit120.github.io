@@ -2,7 +2,7 @@
 layout: default_blog
 title: Archit - A simple python webapp
 description: Hi! I'm Archit. 
----
+--- 
 
 ## Demo
 
@@ -88,7 +88,9 @@ Heroku build process in its usual way is not really compatible with the requirem
 
  There's a fourth way aswell that would be including the dependency fetch step in `Procfile` but this is a bad way to do achieve this. Please don't do this because you will add a significant start time.
 
- I 
+## Docker
+
+I wanted to use Heroku's github integration so that only left the third option of docker deployment. This was pretty easy to configure because all we needed was a python installation and a git clone. Instead of using `Procfile` we could just specify CMD in the `Dockerfile`.
 
 
 ```
@@ -105,3 +107,14 @@ RUN git clone https://github.com/archit120/DNSWhy.git
 
 CMD gunicorn main:app
 ```
+
+Along with the `Dockerfile` another file named `heroku.yml` is necessary which tells heroku that the web type dyno is using this `Dockerfile`.
+
+```yaml
+build:
+  docker:
+    web: Dockerfile
+```
+
+## Deployment 
+
