@@ -1,6 +1,6 @@
 ---
 layout: default_blog
-title: Archit - A DNS Dive
+title: Archit - A DNS Dive - Creating a DNS Resolver - 2
 description: Hi! I'm Archit. This page attempts to chronicle my experience of creating a DNS resolver
 ---
 

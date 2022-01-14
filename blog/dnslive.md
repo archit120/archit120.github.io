@@ -1,6 +1,6 @@
 ---
 layout: default_blog
-title: Archit - A simple python webapp
+title: Archit - A simple python webapp for DNS resolution
 description: Hi! I'm Archit. 
 --- 
 
@@ -90,7 +90,7 @@ Heroku build process in its usual way is not really compatible with the requirem
 
 ## Docker
 
-I wanted to use Heroku's github integration so that only left the third option of docker deployment. This was pretty easy to configure because all we needed was a python installation and a git clone. Instead of using `Procfile` we could just specify CMD in the `Dockerfile`.
+I wanted to use Heroku's github integration so that only left the third option of docker deployment. This was pretty easy to configure because all I  needed was a python installation and a git clone. Instead of using `Procfile` I could just specify CMD in the `Dockerfile`.
 
 
 ```
@@ -117,4 +117,22 @@ build:
 ```
 
 ## Deployment 
+
+With all that out of the way I pushed it on to my [github](https://github.com/archit120/dnswhy-flask). Set up the heroku integration and loaded up https://dnswhy-flask.herokuapp.com/archit.me hoping to see some nice DNS output but instead got greeted with an error that no server is running. Looking at the logs I realize that heroku is unable to figure out that I want a docker deployment. This was quickly fixed by running 
+
+```
+> heroku stack:set container
+```
+
+And this time it worked perfectly! The final step was to write the javascript demo for this post. With everything set in place I used a little jquery to 
+hook it all up and display the output.
+
+
+```
+$("#dns-btn").on("click", function(x) { 
+    $.get("https://dnswhy-flask.herokuapp.com/"+$("#dns-input").val(), function(x) {
+        $("#dns-output").text(x); 
+    });
+})
+```
 

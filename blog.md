@@ -6,7 +6,9 @@ description: Hi! I'm Archit, here you can find a collection of my technical writ
 
 ## Some technical and random musings
 
-7. [A DNS Dive - Part 2](/blog/dns2) Finishing up on the DNS resolver.
+8. [Heroku Based Python Webapp](/blog/dnslive) I hosted the DNS resolved I wrote previously on a Heroku backend and created a frontend on this blog.
+
+7. [A DNS Dive - Part 2](/blog/dns2) Finishing up on the python DNS resolver.
 
 6. [A DNS Dive](/blog/dns) My attempt at creating a DNS resolver.
 
