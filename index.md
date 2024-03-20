@@ -10,7 +10,7 @@ description: Hi! I'm Archit, an undergraduate junior exploring the world of comp
 
 <img class="profile-picture" src="archit.jpg">
 
-Hi! I am Archit, a senior at Indian Institute of Technology, Kharagpur currently completing a BS+MS major in Mathematics and Computing with minor in Computer Science and Engineering. I've had stints with competetive programming and software development.  Currently, I'm a perception team member at Aerial Robotics Lab, Kharagpur and also interested in Reinforcement Learning. 
+Hi! I am Archit, a senior at Indian Institute of Technology, Kharagpur currently completing a BS+MS major in Mathematics and Computing with minor in Computer Science and Engineering. I've had stints with competitive programming and software development.  Currently, I'm a perception team member at Aerial Robotics Lab, Kharagpur and also interested in Reinforcement Learning. 
 
 Hit me up if you've got a cool idea regarding any of those and wish to collaborate!
 
