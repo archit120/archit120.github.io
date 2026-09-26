@@ -16,7 +16,7 @@ This is very close to what I wanted from programming in the first place. I wrote
 
 The part I feel much more conflicted about is learning.
 
-A lot of the happiness I’ve gotten from programming came from being stuck, thinking for a while, and eventually understanding. Even if mentally taxing and slow, I really liked this process. AI changes that relationship. If I want to build something, increasingly I can just build it.
+A lot of the happiness I’ve gotten from programming came from being stuck, thinking for a while, and eventually understanding. Even if mentally taxing and slow, I really liked this process. AI has changed the relationship.
 
 I don’t think this makes learning unachievable. I’ve learned plenty of things without needing to. I learned about CPU architecture mostly because I just wanted to understand it. I just don’t know how much of my curiosity came from necessity.
 
