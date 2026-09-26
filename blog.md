@@ -6,6 +6,8 @@ description: Hi! I'm Archit, here you can find a collection of my technical writ
 
 ## Some technical and random musings
 
+9. [AI, Programming, and Learning](/blog/ai-programming-and-learning) Thoughts on AI, the joy of building software, and the learning that used to come with it.
+
 8. [Heroku Based Python Webapp](/blog/dnslive) I hosted the DNS resolved I wrote previously on a Heroku backend and created a frontend on this blog.
 
 7. [A DNS Dive - Part 2](/blog/dns2) Finishing up on the python DNS resolver.
